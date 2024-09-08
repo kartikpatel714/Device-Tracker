@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-Time Device Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Real-Time Device Tracker</h1>
+
+    <div id="map" class="map"></div>
+
+    <!-- Share location section -->
+    <div class="share-section">
+      <button id="shareLocationBtn">Share My Location</button>
+      <p id="shareCodeDisplay" style="display: none">
+        Share Code: <span id="shareCode"></span>
+      </p>
+    </div>
+
+    <!-- View shared location section -->
+    <div class="view-section">
+      <input type="text" id="shareCodeInput" placeholder="Enter share code" />
+      <button id="viewSharedLocationBtn">View Shared Location</button>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <!-- Socket.IO -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- Custom Script -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
